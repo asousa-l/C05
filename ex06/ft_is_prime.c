@@ -19,15 +19,17 @@ int	ft_is_prime(int nb)
 	int	c;
 
 	c = 2;
-	while (c <= nb / 2)
+	if (nb < 2)
+		return (0);
+	while (c <= nb / 2 && c <= 46341)
 	{
 		if (nb % c == 0)
 			return (0);
 		c++;
 	}
-	return (0);
+	return (1);
 }
-/*
+
 int		main(void)
 {
 	printf("-10 = %d (0)\n", ft_is_prime(-10));
@@ -43,5 +45,5 @@ int		main(void)
 	printf(" 8 = %d (0)\n", ft_is_prime(8));
 	printf(" 9 = %d (0)\n", ft_is_prime(9));
 	printf(" 10 = %d (0)\n", ft_is_prime(10));
-	printf(" 11 = %d (1)\n", ft_is_prime(11));
-}*/
+	printf(" 11 = %d (1)\n", ft_is_prime(197));
+}

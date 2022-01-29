@@ -14,8 +14,6 @@
 
 int	ft_fibonacci(int index)
 {
-	int	f;
-
 	if (index < 0)
 		return (-1);
 	else if (index == 0)
@@ -24,11 +22,10 @@ int	ft_fibonacci(int index)
 		return (1);
 	else
 	{
-		f = ft_fibonacci(index - 1) + ft_fibonacci(index - 2);
-		return (f);
+		return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
 	}
 }
-/*
+
 int	main(void)
 {
 	int	index;
@@ -39,4 +36,4 @@ int	main(void)
 		printf("fibonacci(%d) = %d\n", index, ft_fibonacci(index));
 		index++;
 	}
-}*/
+}
